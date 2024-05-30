@@ -1,0 +1,126 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ff6f61;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cake {
+    width: 160px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.cake-layer {
+    width: 100%;
+    background-color: #ffcccb;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cake-layer-bottom {
+    height: 60px;
+    bottom: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.cake-layer-middle {
+    height: 40px;
+    bottom: 60px;
+    width: 90%;
+    background-color: #ffb6c1;
+}
+
+.cake-layer-top {
+    height: 30px;
+    bottom: 100px;
+    width: 80%;
+    background-color: #ff9999;
+    border-radius: 20px 20px 0 0;
+}
+
+.candle {
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.candle-body {
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flame {
+    width: 20px;
+    height: 40px;
+    background: radial-gradient(circle, yellow, orange, red);
+    border-radius: 50% 50% 50% 0;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+    animation: flicker 1s infinite alternate;
+    transform-origin: bottom center;
+}
+
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) rotate(-45deg) scaleY(1);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-50%) rotate(-40deg) scaleY(1.2);
+        opacity: 0.9;
+    }
+    50% {
+        transform: translateX(-50%) rotate(-35deg) scaleY(0.8);
+        opacity: 0.85;
+    }
+    75% {
+        transform: translateX(-50%) rotate(-50deg) scaleY(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(-50%) rotate(-45deg) scaleY(1);
+        opacity: 1;
+    }
+}
+
+.plate {
+    width: 180px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
