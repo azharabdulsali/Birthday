@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     const flame = document.getElementById('flame');
     const happyBirthdaySong = document.getElementById('happyBirthdaySong');
+    const wishButton = document.getElementById('wishButton');
+    const popup = document.getElementById('popup');
+    const closeButton = document.querySelector('.close-button');
 
     function blowOutCandle() {
         flame.style.display = 'none';
@@ -40,6 +43,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             console.error('Error accessing microphone: ', err);
         }
     }
+
+    wishButton.addEventListener('click', () => {
+        popup.style.display = 'flex';
+    });
+
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
 
     setupMicrophone();
 });
